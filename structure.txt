@@ -1,0 +1,114 @@
+password-breach-notification-system/
+│── backend/                 # Backend services
+│   ├── config/              # Configuration files (env, database)
+│   ├── controllers/         # API controllers
+│   ├── models/              # Database schemas/models
+│   ├── routes/              # API endpoints
+│   ├── middlewares/         # Authentication & security middleware
+│   ├── services/            # Business logic & integrations (API, notifications)
+│   ├── utils/               # Utility functions
+│   ├── tests/               # Unit & integration tests
+│   ├── index.js             # Main entry file
+│   ├── package.json         # Dependencies & scripts
+│   ├── .env.example         # Example environment variables
+│── frontend/                # Optional frontend (React)
+│   ├── public/              # Static files
+│   ├── src/                 # Main source code
+│   ├── components/          # Reusable UI components
+│   ├── pages/               # Page views
+│   ├── services/            # API calls
+│   ├── App.js               # Main React app
+│   ├── index.js             # Entry file
+│   ├── package.json         # Frontend dependencies
+│── database/                # Database-related scripts
+│── scripts/                 # Automation or cron jobs
+│── logs/                    # System logs
+│── Dockerfile               # Docker configuration
+│── README.md                # Documentation
+│── .gitignore               # Ignore unnecessary files
+│── .prettierrc              # Code formatting rules
+
+
+#use (for %i in (file1.txt test.js ) do type nul > %i)  to create multiple files at once
+backend/
+│── config/
+│   ├── db.js                 # Database connection settings (MongoDB)
+│   ├── env.js                # Loads environment variables
+│── controllers/
+│   ├── authController.js      # Handles user authentication (login, register)
+│   ├── breachController.js    # Checks password breaches
+│   ├── notificationController.js # Manages email/SMS alerts
+│── models/
+│   ├── User.js                # User schema/model
+│   ├── Breach.js              # Breach history schema/model
+│── routes/
+│   ├── authRoutes.js          # Routes for authentication
+│   ├── breachRoutes.js        # Routes for checking breaches
+│   ├── notificationRoutes.js  # Routes for sending alerts
+│── middlewares/
+│   ├── authMiddleware.js      # JWT authentication middleware
+│   ├── errorHandler.js        # Centralized error handling middleware
+│── services/
+│   ├── breachService.js       # Integrates with Have I Been Pwned API
+│   ├── emailService.js        # Handles email notifications via Nodemailer
+│   ├── smsService.js          # Sends SMS alerts (Twilio, etc.)
+│── utils/
+│   ├── logger.js              # Logging utility (Winston, etc.)
+│   ├── hashUtil.js            # SHA-1 hashing function
+│── tests/
+│   ├── auth.test.js           # Unit tests for authentication
+│   ├── breach.test.js         # Unit tests for breach check
+│── index.js                   # Main server entry file
+│── package.json               # Dependencies & scripts
+│── package-lock.json          # Exact dependency versions
+│── .env.example               # Example environment variables
+
+
+
+frontend/
+│── public/
+│   ├── index.html             # Main HTML file (Vite entry)
+│── src/
+│   ├── components/            # Reusable UI components
+│   │   ├── Navbar.jsx         # Navigation bar
+│   │   ├── AlertBox.jsx       # Notification alert component
+│   ├── pages/                 # Page views
+│   │   ├── Home.jsx           # Homepage
+│   │   ├── Dashboard.jsx      # User dashboard
+│   ├── services/              # API request handlers
+│   │   ├── api.js             # Fetch API calls
+│   ├── App.jsx                # Main React component
+│   ├── main.jsx               # React entry point
+│   ├── index.css              # Tailwind styles
+│── package.json               # Project dependencies
+│── vite.config.js             # Vite configuration
+│── tailwind.config.js         # Tailwind configuration
+│── postcss.config.js          # PostCSS configuration
+│── node_modules/              # Installed dependencies (after `npm install`)
+│── .gitignore                 # Ignore unnecessary files
+
+
+
+
+database/
+│── init.js                    # Initializes MongoDB collections
+│── seed.js                     # Inserts sample data
+
+
+scripts/
+│── dailyBreachCheck.js         # Automated daily scan for breaches
+│── sendAlerts.js               # Scheduled notifications
+
+
+logs/
+│── error.log                   # Error logs
+│── request.log                 # API request logs
+
+
+Root files
+│── Dockerfile                   # Docker configuration
+│── README.md                     # Project documentation
+│── .gitignore                     # Ignore unnecessary files
+│── .prettierrc                    # Code formatting rules
+
+
